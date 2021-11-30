@@ -1,0 +1,28 @@
+Package: margaret
+Type: Package
+Title: Scientometric analysis Minciencias
+Version: 0.1.1
+Author: Core of science
+Maintainer: Sebastian Robledo <sebastian.robledogi@amigo.edu.co>
+Description: This package helps to extract data from Minciencias to analyze scientific production in Colombia
+Depends:
+    R (>= 3.4.0)
+Imports: 
+    SnowballC,
+    gt,
+    here,
+    kableExtra,
+    lubridate,
+    openxlsx,
+    rvest,
+    scholar,
+    stringi,
+    tidytext,
+    tidyverse,
+    treemapify,
+    widyr,
+    xml2
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 7.1.2
