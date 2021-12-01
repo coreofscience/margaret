@@ -24,6 +24,7 @@ getting_data <- function(df, researchers) {
   library(widyr)
   library(xml2)
   library(writexl)
+  library(igraph)
 
   if(missing(researchers)){
     researchers = 0
