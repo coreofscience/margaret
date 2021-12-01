@@ -22,7 +22,8 @@ Imports:
     treemapify,
     widyr,
     xml2,
-    writexl
+    writexl,
+    igraph
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true

@@ -1,5 +1,5 @@
 #' @title data_getting
-#' @import SnowballC here gt kableExtra lubridate openxlsx rvest scholar stringi tidytext tidyverse treemapify widyr xml2 writexl
+#' @import SnowballC here gt kableExtra lubridate openxlsx rvest scholar stringi tidytext tidyverse treemapify widyr xml2 writexl igraph
 #' @param df A dataframe that has group's informations
 #' @param researchers A dataframe with ID from google scholar form researchers
 #' @details This function get information from GrupLac
