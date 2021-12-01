@@ -7,23 +7,23 @@
 #' @importFrom stats end var
 #' @importFrom utils data
 
-library(tidyverse)
-library(SnowballC)
-library(here)
-library(gt)
-library(kableExtra)
-library(lubridate)
-library(openxlsx)
-library(rvest)
-library(scholar)
-library(stringi)
-library(tidytext)
-library(treemapify)
-library(widyr)
-library(xml2)
-library(writexl)
-
 getting_data <- function(df, researchers) {
+
+  library(tidyverse)
+  library(SnowballC)
+  library(here)
+  library(gt)
+  library(kableExtra)
+  library(lubridate)
+  library(openxlsx)
+  library(rvest)
+  library(scholar)
+  library(stringi)
+  library(tidytext)
+  library(treemapify)
+  library(widyr)
+  library(xml2)
+  library(writexl)
 
   if(missing(researchers)){
     researchers = 0
