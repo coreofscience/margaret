@@ -1,11 +1,27 @@
 #' @title data_getting
-#' @import SnowballC here gt kableExtra lubridate openxlsx rvest scholar stringi tidytext tidyverse treemapify widyr xml2
+#' @import SnowballC here gt kableExtra lubridate openxlsx rvest scholar stringi tidytext tidyverse treemapify widyr xml2 writexl
 #' @param df A dataframe that has group's informations
 #' @param researchers A dataframe with ID from google scholar form researchers
 #' @details This function get information from GrupLac
 #' @export
 #' @importFrom stats end var
 #' @importFrom utils data
+
+library(tidyverse)
+library(SnowballC)
+library(here)
+library(gt)
+library(kableExtra)
+library(lubridate)
+library(openxlsx)
+library(rvest)
+library(scholar)
+library(stringi)
+library(tidytext)
+library(treemapify)
+library(widyr)
+library(xml2)
+library(writexl)
 
 getting_data <- function(df, researchers) {
 

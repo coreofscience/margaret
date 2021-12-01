@@ -21,7 +21,8 @@ Imports:
     tidyverse,
     treemapify,
     widyr,
-    xml2
+    xml2,
+    writexl
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
