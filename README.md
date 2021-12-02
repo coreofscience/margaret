@@ -5,10 +5,7 @@ This package extracts the data from Minciencias web pages.
 
 # Installation
 ```
-#Install from CRAN
-install.packages("margaret")
-
-#Or the version from GitHub
+From GitHub
 #install.packages(“devtools”)
 devtools::install_github(“coreofscience/margaret”)
 ```
