@@ -4,12 +4,13 @@
 This package extracts the data from Minciencias web pages.
 
 # Installation
-```
 ## From GitHub
+
+```
 #install.packages(“devtools”)
 devtools::install_github(“coreofscience/margaret”)
 ```
-Load margaret
+## Load margaret
 ```
 library(margaret)
 ```
