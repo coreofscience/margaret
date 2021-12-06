@@ -3,17 +3,17 @@
 \docType{data}
 \name{international_journals_2016_2020}
 \alias{international_journals_2016_2020}
-\title{Scimago 2016 to 2020}
+\title{Publindex homologación de revistas 2016 to 2020}
 \format{
-A dataframe whit information about journal ranking from scimago
+A dataframe with information about journal ranking from scimago
 }
 \source{
-\url{https://github.com/ikashnitsky/sjrdata} \url{https://www.scimagojr.com/}
+\url{https://scienti.minciencias.gov.co/publindex/#/revistasHomologadas/buscador}
 }
 \usage{
 international_journals_2016_2020
 }
 \description{
-Scimago 2016 to 2020
+Publindex homologación de revistas 2016 to 2020
 }
 \keyword{datasets}

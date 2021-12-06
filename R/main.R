@@ -1,13 +1,24 @@
-#' @title data_getting
+#' @title Data getting
+#' @description This function get information from GrupLac
 #' @import SnowballC here gt kableExtra lubridate openxlsx rvest scholar stringi tidytext tidyverse treemapify widyr xml2 writexl igraph
-#' @param df A dataframe that has group's informations
+#' @param groups A dataframe that has group's informations
 #' @param researchers A dataframe with ID from google scholar form researchers
-#' @details This function get information from GrupLac
+#' @details Extracts data from Minciencias web pages about research groups and researchers
 #' @export
 #' @importFrom stats end var
 #' @importFrom utils data
+#' @examples
+#' \dontrun{
+#' Load data in a dataframe of r
+#' groups <- read.csv(".../groups_information.csv", header=T, sep=",")
+#'
+#' margaret_data <- getting_data(groups)
+#'
+#' #or just
+#' margaret::getting_data(groups)
+#' }
 
-getting_data <- function(df, researchers) {
+getting_data <- function(groups, researchers) {
 
   library(tidyverse)
   library(SnowballC)
@@ -38,7 +49,7 @@ getting_data <- function(df, researchers) {
   #source("R/functions.R")
   #eval(parse("R/functions.R", encoding = "UTF-8"))
 
-  df <- df |>
+  df <- groups |>
     mutate(grupo = str_to_upper(grupo),
            grupo = stri_trans_general(str = grupo,
                                       id = "Latin-ASCII"))

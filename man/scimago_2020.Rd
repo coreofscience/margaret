@@ -5,7 +5,7 @@
 \alias{scimago_2020}
 \title{Scimago 2020 data}
 \format{
-A dataframe whit information about journal ranking from scimago
+A dataframe with information about journal ranking from scimago
 }
 \source{
 \url{https://github.com/ikashnitsky/sjrdata} \url{https://www.scimagojr.com/}

@@ -2,18 +2,29 @@
 % Please edit documentation in R/main.R
 \name{getting_data}
 \alias{getting_data}
-\title{data_getting}
+\title{Data getting}
 \usage{
-getting_data(df, researchers)
+getting_data(groups, researchers)
 }
 \arguments{
-\item{df}{A dataframe that has group's informations}
-
 \item{researchers}{A dataframe with ID from google scholar form researchers}
+
+\item{df}{A dataframe that has group's informations}
 }
 \description{
-data_getting
+This function get information from GrupLac
 }
 \details{
-This function get information from GrupLac
+Extracts data from Minciencias web pages about research groups and researchers
+}
+\examples{
+\dontrun{
+Load data in a dataframe of r
+groups <- read.csv(".../groups_information.csv", header=T, sep=",")
+
+margaret_data <- getting_data(groups)
+
+#or just
+margaret::getting_data(groups)
+}
 }
