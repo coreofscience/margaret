@@ -1,9 +1,9 @@
 #' @title Data getting
-#' @description This function get information from GrupLac
-#' @import SnowballC here gt kableExtra lubridate openxlsx rvest scholar stringi tidytext tidyverse treemapify widyr xml2 writexl igraph
+#' @description This function get information from GrupLac.
+#' @import devtools SnowballC here gt kableExtra lubridate openxlsx rvest scholar stringi tidytext tidyverse treemapify widyr xml2 writexl igraph
 #' @param groups A dataframe that has group's informations
 #' @param researchers A dataframe with ID from google scholar form researchers
-#' @details Extracts data from Minciencias web pages about research groups and researchers
+#' @details Extracts data from Minciencias web pages about research groups and researchers.
 #' @export
 #' @importFrom stats end var
 #' @importFrom utils data
@@ -20,7 +20,7 @@
 
 getting_data <- function(groups, researchers) {
 
-  library(tidyverse)
+  usethis::use_package('tidyverse')
   library(SnowballC)
   library(here)
   library(gt)

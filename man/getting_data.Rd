@@ -7,15 +7,15 @@
 getting_data(groups, researchers)
 }
 \arguments{
-\item{researchers}{A dataframe with ID from google scholar form researchers}
+\item{groups}{A dataframe that has group's informations}
 
-\item{df}{A dataframe that has group's informations}
+\item{researchers}{A dataframe with ID from google scholar form researchers}
 }
 \description{
-This function get information from GrupLac
+This function get information from GrupLac.
 }
 \details{
-Extracts data from Minciencias web pages about research groups and researchers
+Extracts data from Minciencias web pages about research groups and researchers.
 }
 \examples{
 \dontrun{

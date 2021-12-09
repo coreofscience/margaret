@@ -2,6 +2,7 @@
 
 export(getting_data)
 import(SnowballC)
+import(devtools)
 import(gt)
 import(here)
 import(igraph)

@@ -1,13 +1,14 @@
 Package: margaret
 Type: Package
-Title: Scientometric analysis Minciencias
+Title: Scientometric analysis Minciencias.
 Version: 0.1.1
 Author: Sebastian Robledo, Bryan Arias, Camilo Garcia, Universidad Catolica Luis Amigo, Core of science
 Maintainer: Camilo Garcia <camilo.garciasa@amigo.edu.co>
-Description: This package helps to extract data from Minciencias to analyze scientific production in Colombia
+Description: This package helps to extract data from Minciencias. To analyze scientific production in Colombia.
 Depends:
     R (>= 3.5.0)
-Imports: 
+Imports:
+    devtools,
     SnowballC,
     gt,
     here,
