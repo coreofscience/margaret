@@ -6,7 +6,8 @@ Author: Sebastian Robledo, Bryan Arias, Camilo Garcia, Universidad Catolica Luis
 Maintainer: Camilo Garcia <camilo.garciasa@amigo.edu.co>
 Description: This package helps to extract data from Minciencias. To analyze scientific production in Colombia.
 Depends:
-    R (>= 3.5.0)
+    R (>= 3.5.0),
+    tidyverse
 Imports:
     rlang,
     usethis,
@@ -21,7 +22,6 @@ Imports:
     scholar,
     stringi,
     tidytext,
-    tidyverse,
     treemapify,
     widyr,
     xml2,
