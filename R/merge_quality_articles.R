@@ -8,7 +8,7 @@ merge_quality_articles <- function(produccion_grupos){
     produccion_grupos[[2]][["articulos"]]
 
   devtools::install_github("ikashnitsky/sjrdata")
-  usethis::use_package('sjrdata')
+  library(sjrdata)
 
   scimago_2020 <- scimago_2020 |>
     separate_rows(Issn, sep = ", ")|>
