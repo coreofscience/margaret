@@ -8,6 +8,8 @@ Description: This package helps to extract data from Minciencias. To analyze sci
 Depends:
     R (>= 3.5.0)
 Imports:
+    rlang,
+    usethis,
     devtools,
     SnowballC,
     gt,

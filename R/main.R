@@ -1,6 +1,6 @@
 #' @title Data getting
 #' @description This function get information from GrupLac.
-#' @import devtools SnowballC here gt kableExtra lubridate openxlsx rvest scholar stringi tidytext tidyverse treemapify widyr xml2 writexl igraph
+#' @import usethis rlang devtools SnowballC here gt kableExtra lubridate openxlsx rvest scholar stringi tidytext tidyverse treemapify widyr xml2 writexl igraph
 #' @param groups A dataframe that has group's informations
 #' @param researchers A dataframe with ID from google scholar form researchers
 #' @details Extracts data from Minciencias web pages about research groups and researchers.
@@ -19,23 +19,24 @@
 #' }
 
 getting_data <- function(groups, researchers) {
-
-  usethis::use_package('tidyverse')
-  library(SnowballC)
-  library(here)
-  library(gt)
-  library(kableExtra)
-  library(lubridate)
-  library(openxlsx)
-  library(rvest)
-  library(scholar)
-  library(stringi)
-  library(tidytext)
-  library(treemapify)
-  library(widyr)
-  library(xml2)
-  library(writexl)
-  library(igraph)
+#
+#   usethis::use_package('rlang')
+#   usethis::use_package('tidyverse')
+#   usethis::use_package('SnowballC')
+#   usethis::use_package('here')
+#   usethis::use_package('gt')
+#   usethis::use_package('kableExtra')
+#   usethis::use_package('lubridate')
+#   usethis::use_package('openxlsx')
+#   usethis::use_package('rvest')
+#   usethis::use_package('scholar')
+#   usethis::use_package('stringi')
+#   usethis::use_package('tidytext')
+#   usethis::use_package('treemapify')
+#   usethis::use_package('widyr')
+#   usethis::use_package('xml2')
+#   usethis::use_package('writexl')
+#   usethis::use_package('igraph')
 
   if(missing(researchers)){
     researchers = 0
