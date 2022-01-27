@@ -364,13 +364,24 @@ data_getting_researcher <- function(grupos, data_grupos_all){
   return(df_researcher)
 }
 
-
+A <- "\u00c1"
+a <- "\u00e1"
+E <- "\u00c9"
+e <- "\u00e9"
+I <- "\u00cd"
+i <- "\u00ed"
+O <- "\u00d3"
+o <- "\u00f3"
+U <- "\u00da"
+u <- "\u00fa"
+N <- "\u00d1"
+n <- "\u00f1"
 
 trabajos_dirigidos_ucla <- function(grupo_df) {
 
   trabajosdirigidos =
-    grupo_df %>%
-    filter(categoria == "Trabajos dirigidos/turorías") %>%
+    grupo_df[["grupo_product"]] %>%
+    filter(categoria == paste("Trabajos dirigidos/turor",i,"as", sep = "")) %>%
     separate(producto,
              c("info_1","info_2","info_3","info_4","info_5",
                "info_6","info_7","info_8","info_9","info_10",
@@ -395,7 +406,7 @@ trabajos_dirigidos_ucla <- function(grupo_df) {
            estudiante = str_remove(estudiante, ",$"),
            programa_academico = str_remove(info_9, ".*:"),
            programa_academico = str_trim(programa_academico),
-           paginas = str_remove(info_10, ".*páginas: "),
+           paginas = str_remove(info_10, paste(".*p",a,"ginas: ", sep="")),
            paginas= str_remove(paginas, ",.*"),
            valoracion= str_extract(info_10, ",.*"),
            valoracion= str_remove(valoracion, "^,"),
@@ -403,7 +414,7 @@ trabajos_dirigidos_ucla <- function(grupo_df) {
            valoracion= str_remove(valoracion, ","),
            valoracion= str_trim(valoracion),
            institucion = str_trim(info_11),
-           institucion = str_remove(institucion, ".*Institución: "),
+           institucion = str_remove(institucion, paste(".*Instituci",o,"n: ", sep = "")),
            tutor_coautor = str_trim(info_13),
            tutor_coautor = str_remove(tutor_coautor, ".*: ")) %>%
     select(-info_2,
