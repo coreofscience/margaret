@@ -846,7 +846,7 @@ consultorias_ucla <- function(grupo_df) {
 
   grupo_df_consultorias_cientico_tecnologicas <-
     grupo_df%>%
-    filter(categoria == paste("Consultor",i,"as científico-tecnológicas", sep = "")) %>%
+    filter(categoria == paste("Consultor",i,"as cient",i,"fico-tecnol",o,"gicas", sep = "")) %>%
     separate(producto ,
              c("info_1", "info_2","info_3","info_4","info_5","info_6","info_7"),
              sep = "\r\n" )%>%
@@ -948,7 +948,7 @@ libros_ucla <- function(grupo_df) {
 
 participacion_comites_ucla <- function(grupo_df) {
 
-  #Data cleaning "Participación en comités de evaluación"
+  #Data cleaning "Participacion en comites de evaluacion"
 
   grupo_df_participacion_comites <-
     grupo_df %>%
@@ -2047,7 +2047,7 @@ producciones_digital_audiovisual_ucla <- function(grupo_df){
            tipo_producto = str_trim(tipo_producto),
            titulo_producto = str_remove(info_1, ".*\\) "),
            titulo_producto = str_trim(titulo_producto),
-           ano = str_remove(info_3, ".*Año: "),
+           ano = str_remove(info_3, paste(".*A",n,"o: ", sep = "")),
            ano = str_remove(ano, ",.*"),
            ano = str_trim(ano),
            mes = str_remove(info_3, ".*Mes: "),
@@ -2090,7 +2090,7 @@ Producciones_de_contenido_digital_ucla <- function(grupo_df){
            tipo_producto = str_trim(tipo_producto),
            titulo_producto = str_remove(info_1, ".*\\) "),
            titulo_producto = str_trim(titulo_producto),
-           ano = str_remove(info_3, ".*Año: "),
+           ano = str_remove(info_3, paste(".*A",n,"o: ", sep = "")),
            ano = str_remove(ano, ",.*"),
            ano = str_trim(ano),
            mes = str_remove(info_3, ".*Mes: "),
@@ -2138,7 +2138,7 @@ notas_cientificas_ucla <- function(grupo_df){
            pagina_inicial = str_remove(info_8, ".*inicial: "),
            pagina_inicial = str_remove(pagina_inicial, ",.*"),
            pagina_final= str_remove(info_8, ".*final: "),
-           ano = str_remove(info_10, ".*Año: "),
+           ano = str_remove(info_10, paste(".*A",n,"o: ", sep = "")),
            ano = str_remove(ano, ",.*"),
            mes = str_remove(info_10, ".*Mes: "),
            sitio_web = str_extract(info_10, "https.*"),
@@ -2193,7 +2193,7 @@ divulgacion_publica_contenidos_transmedia_ucla <- function(grupo_df) {
            tipo_producto = str_remove(tipo_producto, ".*\\d. "),
            titulo = str_remove(info_1, ".*transmedia"),
            titulo = str_trim(titulo),
-           ano = str_remove(info_3, ".*Año: "),
+           ano = str_remove(info_3, paste(".*A",n,"o: ", sep = "")),
            ano = str_remove(ano, ",.*"),
            ano = str_trim(ano),
            mes = str_remove(info_3, ".*Mes: "),
