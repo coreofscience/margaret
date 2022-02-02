@@ -380,7 +380,7 @@ n <- "\u00f1"
 trabajos_dirigidos_ucla <- function(grupo_df) {
 
   trabajosdirigidos =
-    grupo_df[["grupo_product"]] %>%
+    grupo_df %>%
     filter(categoria == paste("Trabajos dirigidos/turor",i,"as", sep = "")) %>%
     separate(producto,
              c("info_1","info_2","info_3","info_4","info_5",

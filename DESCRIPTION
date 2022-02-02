@@ -20,6 +20,7 @@ Imports:
     openxlsx,
     rvest,
     scholar,
+    sjrdata,
     stringi,
     tidytext,
     treemapify,
