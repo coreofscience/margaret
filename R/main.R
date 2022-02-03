@@ -1,12 +1,14 @@
 #' @title Data getting
 #' @description This function get information from GrupLac.
-#' @import usethis rlang devtools SnowballC here gt kableExtra lubridate openxlsx rvest scholar sjrdata stringi tidytext tidyverse treemapify widyr xml2 writexl igraph
-#' @param groups A dataframe that has group's informations
+#' @import usethis rlang devtools SnowballC here gt kableExtra openxlsx rvest scholar sjrdata stringi tidytext tidyverse treemapify widyr writexl
+#' @param groups A dataframe with information about groups and links from GrupLAC
 #' @param researchers A dataframe with ID from google scholar form researchers
 #' @details Extracts data from Minciencias web pages about research groups and researchers.
 #' @export
 #' @importFrom stats end var
 #' @importFrom utils data
+#' @importFrom lubridate ym
+#' @importFrom igraph get.edgelist simplify graph_from_data_frame E
 #' @examples
 #' \dontrun{
 #' Load data in a dataframe of r

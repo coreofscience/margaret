@@ -7,7 +7,7 @@
 getting_data(groups, researchers)
 }
 \arguments{
-\item{groups}{A dataframe that has group's informations}
+\item{groups}{A dataframe with information about groups and links from GrupLAC}
 
 \item{researchers}{A dataframe with ID from google scholar form researchers}
 }
