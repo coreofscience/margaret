@@ -1,0 +1,22 @@
+---
+title: "Margaret"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Margaret}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+This vignette explains how to use margaret with an example.
+
+```{r eval = FALSE}
+library(margaret)
+
+# Load data in a dataframe of r
+groups <- read.csv(".../groups_information.csv", header=T, sep=",")
+
+margaret_data <- getting_data(groups)
+
+# Or just
+margaret::getting_data(groups)
+```
