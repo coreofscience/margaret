@@ -44,13 +44,13 @@ getting_data <- function(groups, researchers) {
     researchers = 0
   }
 
-  #source("R/data_getting.R")
-  #source("R/data_cleaning.R")
-  #source("R/data_tidying.R")
-  #source("R/merge_quality_articles.R")
-  #source("R/data_analysis_descriptive.R")
-  #source("R/functions.R")
-  #eval(parse("R/functions.R", encoding = "UTF-8"))
+  # source("R/data_getting.R")
+  # source("R/data_cleaning.R")
+  # source("R/data_tidying.R")
+  # source("R/merge_quality_articles.R")
+  # source("R/data_analysis_descriptive.R")
+  # source("R/functions.R")
+  # eval(parse("R/functions.R", encoding = "UTF-8"))
 
   df <- groups |>
     mutate(grupo = str_to_upper(grupo),
