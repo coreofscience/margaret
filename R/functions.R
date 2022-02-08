@@ -2569,7 +2569,7 @@ researcher_product <- function(produccion_actualizada){
   if(dim(produccion_actualizada[[2]][["articulos"]])[1] == 0){
     articulos_author <- tibble(grupo="NA",
                                autores="NA",
-                               articulos="NA")
+                               articulos=0)
   }else{
 
     articulos_author <-
@@ -2677,7 +2677,7 @@ researcher_product <- function(produccion_actualizada){
   if(dim(produccion_actualizada[[2]][["innovaciones_gestion"]])[1] == 0){
     innovaciones_author <- tibble(grupo = "NA",
                                   autores = "NA",
-                                  innovaciones =0)
+                                  innovaciones ="NA")
   }else{
 
     innovaciones_author <-
@@ -2750,12 +2750,12 @@ researcher_product <- function(produccion_actualizada){
     left_join(trabajos_dirigidos_author,
               by = c("integrantes" = "tutor_coautor",
                      "grupo" = "grupo")) |>
-    mutate(articulos = replace_na(articulos, 0),
-           capitulos = replace_na(capitulos, 0),
-           libros = replace_na(libros, 0),
-           softwares = replace_na(softwares, 0),
-           trabajos_dirigidos = replace_na(trabajos_dirigidos,0),
-           innovaciones = replace_na(innovaciones, 0)) |>
+    mutate(articulos = replace_na(articulos, "0"),
+           capitulos = replace_na(capitulos, "0"),
+           libros = replace_na(libros, "0"),
+           softwares = replace_na(softwares, "0"),
+           trabajos_dirigidos = replace_na(trabajos_dirigidos,"0"),
+           innovaciones = replace_na(innovaciones, "0")) |>
     group_by(integrantes) |>
     mutate(grupo = paste0(grupo, collapse = "; "),
            articulos = paste0(articulos, collapse = "; "),
