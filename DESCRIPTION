@@ -21,7 +21,7 @@ Authors@R:
      person(given = "Universidad Católica Luis Amigó",
             role = c("cph", "fnd")),
      person(given = "Core of Science",
-            role = c("cph", "fnd"))
+            role = c("cph", "fnd")))
 Description: This package helps to extract data from Minciencias to analyze scientific production in Colombia.
 Depends:
     R (>= 3.5.0),
