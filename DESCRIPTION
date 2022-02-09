@@ -2,9 +2,27 @@ Package: margaret
 Type: Package
 Title: Scientometric analysis Minciencias
 Version: 0.1.1
-Author: Sebastian Robledo, Bryan Arias, Camilo Garcia, Universidad Catolica Luis Amigo, Core of science
-Maintainer: Camilo Garcia <camilo.garciasa@amigo.edu.co>
-Description: This package helps to extract data from Minciencias. To analyze scientific production in Colombia.
+Authors@R: 
+    c(person(given = "Sebastian",
+             family = "Robledo",
+             role = c("aut"),
+             email = "sebastian.robledogi@amigo.edu.co",
+             comment = c(ORCID = "0000-0003-4357-4402")),
+      person(given = "Bryan",
+             family = "Arias",
+             role = c("aut", "cre"),
+             email = "bryan.ariasqu@amigo.edu.co",
+             comment = c(ORCID = "0000-0002-2215-6175")),
+     person(given = "Camilo",
+            family = "Garcia",
+            role = c("aut"),
+            email = "camilo.garciasa@amigo.edu.co",
+            comment = c(ORCID = "0000-0002-8498-6393")),
+     person(given = "Universidad Católica Luis Amigó",
+            role = c("cph", "fnd")),
+     person(given = "Core of Science",
+            role = c("cph", "fnd")))
+Description: This package helps to extract data from Minciencias to analyze scientific production in Colombia.
 Depends:
     R (>= 3.5.0),
     tidyverse
@@ -28,9 +46,14 @@ Imports:
     xml2,
     writexl,
     igraph
+Suggests: 
+    rmarkdown,
+    knitr
+VignetteBuilder: knitr
 License: MIT + file LICENSE
 URL: https://github.com/coreofscience/margaret
 BugReports: https://github.com/coreofscience/margaret/issues
 Encoding: UTF-8
 LazyData: true
 RoxygenNote: 7.1.2
+Roxygen: list(markdown = TRUE)
