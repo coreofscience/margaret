@@ -1,13 +1,14 @@
 merge_quality_articles <- function(produccion_grupos){
 
   data(scimago_2020)
+  data(scimago_data)
   data(international_journals_2016_2020)
   data(internationals_journal_2021)
 
   articulos_unicos <-
     produccion_grupos[[2]][["articulos"]]
 
-  devtools::install_github("ikashnitsky/sjrdata", force = TRUE)
+  #devtools::install_github("ikashnitsky/sjrdata", force = TRUE)
   #library(sjrdata)
 
   scimago_2020 <- scimago_2020 |>
@@ -15,15 +16,10 @@ merge_quality_articles <- function(produccion_grupos){
     rename("ISSN" = Issn,
            "SJR_Q"= 7) |>
     select(ISSN,SJR_Q) |>
-    mutate(ano = 2020)
+    mutate(ano = "2020,2021") |>
+    separate_rows(ano, sep = ",")
 
-  scimago_data <-  sjrdata::sjr_journals |>
-    filter(year>=2016) |>
-    separate_rows(issn, sep = ", ") |>
-    select(year,issn,sjr_best_quartile) |>
-    rename("ISSN" = issn,
-           "ano" = year,
-           "SJR_Q"= sjr_best_quartile) |>
+  scimago_data <-  scimago_data |>
     rbind(scimago_2020) |>
     mutate(i1 = substr(ISSN, 1,4),
            i2 = substr(ISSN, 5,8)) |>
