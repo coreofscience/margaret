@@ -1,6 +1,5 @@
 Package: margaret
-Type: Package
-Title: Scientometric analysis Minciencias
+Title: Scientometric Analysis Minciencias
 Version: 0.1.1
 Authors@R: 
     c(person(given = "Sebastian",
@@ -22,7 +21,7 @@ Authors@R:
             role = c("cph", "fnd")),
      person(given = "Core of Science",
             role = c("cph", "fnd")))
-Description: This package helps to extract data from Minciencias to analyze scientific production in Colombia.
+Description: The target of 'margaret' is help to extract data from Minciencias to analyze scientific production in Colombia.
 Depends:
     R (>= 3.5.0),
     tidyverse
@@ -49,7 +48,6 @@ Imports:
 Suggests: 
     rmarkdown,
     knitr
-VignetteBuilder: knitr
 License: MIT + file LICENSE
 URL: https://github.com/coreofscience/margaret
 BugReports: https://github.com/coreofscience/margaret/issues
