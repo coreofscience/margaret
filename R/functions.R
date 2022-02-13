@@ -2079,6 +2079,7 @@ producciones_digital_audiovisual_ucla <- function(grupo_df){
 
 Producciones_de_contenido_digital_ucla <- function(grupo_df){
 
+  categoria <- NULL
   grupo_df_producciones_de_contenido_digital <-
     grupo_df %>%
     filter(categoria == paste("Producciones de contenido digital - Recursos gr",a,"ficos", sep = "")) %>%

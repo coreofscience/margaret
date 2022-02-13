@@ -1,9 +1,9 @@
 merge_quality_articles <- function(produccion_grupos){
 
-  data(scimago_2020)
-  data(scimago_data)
-  data(international_journals_2016_2020)
-  data(internationals_journal_2021)
+  data(scimago_2020, envir = environment())
+  data(scimago_data, envir = environment())
+  data(international_journals_2016_2020, envir = environment())
+  data(internationals_journal_2021, envir = environment())
 
   articulos_unicos <-
     produccion_grupos[[2]][["articulos"]]
