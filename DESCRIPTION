@@ -27,6 +27,7 @@ Depends:
     tidyverse
 Imports:
     rlang,
+    dplyr,
     usethis,
     devtools,
     SnowballC,

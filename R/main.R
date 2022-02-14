@@ -5,6 +5,8 @@
 #' @param researchers A dataframe with ID from google scholar form researchers
 #' @details Extracts data from Minciencias web pages about research groups and researchers.
 #' @export
+#' @importFrom dplyr select mutate filter
+#' @importFrom kableExtra group_rows
 #' @importFrom stats end var
 #' @importFrom utils data
 #' @importFrom lubridate ym today
