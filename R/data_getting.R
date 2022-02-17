@@ -1,6 +1,6 @@
 library(tidyverse)
 library(rvest)
-library(here)
+#library(here)
 library(xml2)
 
 data_getting <- function(grupos) {

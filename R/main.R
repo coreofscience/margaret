@@ -1,6 +1,6 @@
 #' @title Data getting
 #' @description This function get information from GrupLac.
-#' @import usethis rlang devtools lubridate SnowballC here gt kableExtra openxlsx rvest scholar stringi tidytext tidyverse treemapify widyr writexl
+#' @import usethis stringr tidyr rlang devtools lubridate SnowballC gt kableExtra openxlsx rvest scholar stringi tidytext tidyverse treemapify widyr writexl
 #' @param groups A dataframe with information about groups and links from GrupLAC
 #' @param researchers A dataframe with ID from google scholar form researchers
 #' @details Extracts data from Minciencias web pages about research groups and researchers.

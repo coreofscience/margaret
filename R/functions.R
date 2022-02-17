@@ -2079,7 +2079,13 @@ producciones_digital_audiovisual_ucla <- function(grupo_df){
 
 Producciones_de_contenido_digital_ucla <- function(grupo_df){
 
-  categoria <- NULL
+  categoria <- producto <- info_1 <- tipo_producto <-
+    info_3 <- ano <- mes <- verificacion <-
+    info_5 <- publico_objetivo <- ciudad <- genero_literario <-
+    tipo <- info_6 <- nombre_proyecto <-
+    tipo_circulacion <- info_7 <- info_8 <- info_2 <-
+    info_4 <- titulo_producto <- NULL
+
   grupo_df_producciones_de_contenido_digital <-
     grupo_df %>%
     filter(categoria == paste("Producciones de contenido digital - Recursos gr",a,"ficos", sep = "")) %>%
@@ -2102,9 +2108,9 @@ Producciones_de_contenido_digital_ucla <- function(grupo_df){
            publico_objetivo = str_remove(info_5, ".*objetivo: "),
            publico_objetivo = str_remove(publico_objetivo, ",.*"),
            publico_objetivo = str_trim(publico_objetivo),
-           cuidad = str_remove(info_5, ".*Ciudad: "),
-           cuidad = str_remove(cuidad, ",.*"),
-           cuidad = str_trim(cuidad),
+           ciudad = str_remove(info_5, ".*Ciudad: "),
+           ciudad = str_remove(ciudad, ",.*"),
+           ciudad = str_trim(ciudad),
            genero_literario = str_remove(info_5, ".*literario: "),
            genero_literario = str_remove(genero_literario, ",.*"),
            genero_literario = str_trim(genero_literario),
