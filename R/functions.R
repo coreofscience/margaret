@@ -399,6 +399,12 @@ n <- "\u00f1"
 
 trabajos_dirigidos_ucla <- function(grupo_df) {
 
+  categoria <- producto <- info_4 <- info_5 <- info_6 <- info_8 <- info_12 <-
+  info_14 <- info_1 <- titulo <- info_2 <- info_3 <- hasta <- info_7 <- tipo_producto <-
+  estudiante <- info_9 <- programa_academico <- info_10 <- paginas <- desde <-
+  valoracion <- info_11 <- institucion <- info_13 <- tutor_coautor <-
+  NULL
+
   trabajosdirigidos =
     grupo_df %>%
     filter(categoria == paste("Trabajos dirigidos/turor",i,"as", sep = "")) %>%
@@ -657,6 +663,9 @@ articulos_ucla <- function(grupo_df) {
 
 proyectos_ucla <- function(grupo_df) {
 
+  categoria <- producto <- info_1 <- Tipo_proyecto <- Titulo <- Fecha_inicio <-
+  info_2 <- info_3 <- fecha_inicio <- info_4 <- info_5 <- NULL
+
   grupo_df_proyectos <-
     grupo_df %>%
     filter(categoria == "Proyectos") %>%
@@ -721,6 +730,11 @@ capitulos_ucla <- function(grupo_df) {
 }
 
 jurado_ucla <- function(grupo_df) {
+
+  categoria <- producto <- info_6 <- info_1 <- Nivel_Academico <- Titulo <-
+  info_2 <- pais <- anno <- info_3 <- Idioma <- Medio_divulgacion <- info_4 <-
+  Sitio_Web <- Nombre_del_Orientado <- info_5 <- Programa_Academico <-
+  Institucion <- info_7 <- Autores <- NULL
 
   grupo_df_Jurado <-
     grupo_df %>%
@@ -828,6 +842,10 @@ cursos_ucla <- function(grupo_df) {
 }
 
 otros_articulos_ucla <- function(grupo_df) {
+
+  categoria <- producto <- info_2 <- info_4 <- info_1 <- tipo_producto <-
+  titulo <- pais <- revista <- ISSN <- ano <- vol <- fasc <- pags <-
+  autores <- NULL
 
   grupo_df_otros_articulos <-
     grupo_df %>%
@@ -953,6 +971,10 @@ consultorias_ucla <- function(grupo_df) {
 
 libros_ucla <- function(grupo_df) {
 
+  categoria <- producto <- info_6 <- info_1 <- Tipo_producto <-
+  Titulo <- info_2 <- info_3 <- Ano <- info_4 <- ISBN <- info_5 <-
+  Editorial <- info_7 <- Autores <- NULL
+
   grupo_df_librosPublicados <-
     grupo_df %>%
     filter(categoria == "Libros publicados") %>%
@@ -991,6 +1013,10 @@ libros_ucla <- function(grupo_df) {
 }
 
 participacion_comites_ucla <- function(grupo_df) {
+
+  producto <- info_5 <- info_1 <- tipo_producto <- titulo <- info_2 <-
+  pais <- anno <- info_3 <- sitio_web <- info_4 <- medio_divulgacion <- categoria <-
+  institucion <- info_6 <- autores <- NULL
 
   #Data cleaning "Participacion en comites de evaluacion"
 
@@ -1196,6 +1222,10 @@ generacion_multimedia_ucla <- function(grupo_df) {
 
 otra_publicacion_divulgativa_ucla <- function(grupo_df) {
 
+  categoria <- producto <- info_1 <- Tipo_Publicacion_divulgativa <- Titulo <-
+  info_2 <- pais <- ano <- libro <- ISBN <- volumen <- Paginas <- Informacion <-
+  Editorial <- info_3 <- info_4 <- Autores <- NULL
+
   grupo_df_otra_publicacion_divulgativa <-
     grupo_df %>%
     filter(categoria == paste("Otra publicaci",o,"n divulgativa", sep = "")) %>%
@@ -1386,6 +1416,10 @@ estrategias_pedagogicas_ucla <- function(grupo_df) {
 
 redes_conocimiento_ucla <- function(grupo_df) {
 
+  categoria <- producto <- info_1 <- titulo <- tipo_red <- info_2 <-
+  pais_ciudad <- desde <- info_3 <- hasta <- numero_participantes <-
+  NULL
+
   grupo_df_redes_conocimiento <-
     grupo_df %>%
     filter(categoria == "Redes de Conocimiento Especializado") %>%
@@ -1495,6 +1529,11 @@ espacios_participacion_ucla <- function(grupo_df) {
 
 softwares_ucla <- function(grupo_df) {
 
+  categoria <- producto <- info_6 <- info_1 <- tipo_producto <- titulo <-
+  info_2 <- pais <- anno <- info_3 <- disponibilidad <- sitio_web <-
+  info_4 <- nombre_comercial <- nombre_proyecto <- info_5 <-
+  institucion_financiadora <- info_7 <- NULL
+
   grupo_df_softwares <-
     grupo_df %>%
     filter(categoria == "Softwares") %>%
@@ -1562,6 +1601,11 @@ innovaciones_procesos_ucla <- function(grupo_df) {
 }
 
 otros_libros_ucla <- function(grupo_df) {
+
+  categoria <- producto <- info_1 <- Tipo_libro <- Titulo <- info_2 <-
+  Pais <- Ano <- ISBN <- Volumen <- Paginas <- Editorial <- info_3 <-
+  info_4 <- Autores <- NULL
+
   grupo_df_otros_libros_publicados<-
     grupo_df %>%
     filter(categoria == "Otros Libros publicados") %>%
@@ -1729,6 +1773,9 @@ informes_tecnicos_ucla <- function(grupo_df) {
 
 participacion_ciudadana_cti_ucla <- function(grupo_df) {
 
+  categoria <- producto <- info_1 <- titulo <- desde <- info_2 <- info_3 <-
+  descripcion <- NULL
+
   grupo_df_participacion_cti <-
     grupo_df %>%
     filter(categoria == paste("Participaci",o,"n Ciudadana en Proyectos de CTI", sep = "")) %>%
@@ -1750,6 +1797,10 @@ participacion_ciudadana_cti_ucla <- function(grupo_df) {
 }
 
 regulaciones_normas_ucla <- function(grupo_df) {
+
+  categoria <- producto <- info_5 <- info_1 <- tipo_producto <- titulo <-
+  info_2 <- pais <- ano <- info_3 <- ambito <- fecha <- info_4 <- objeto <-
+  info_6 <- NULL
 
   grupo_df_regulaciones_normas <-
     grupo_df %>%
@@ -1810,6 +1861,8 @@ apropiacion_social_conocimiento_ucla <- function(grupo_df) {
 }
 
 produccion_tecnica_tecnologica_ucla <- function(grupo_df) {
+
+  categoria <- NULL
 
   grupo_df_produccion_tecnica_tecnologica<-
     grupo_df %>%
@@ -1885,6 +1938,10 @@ conceptos_tecnicos_ucla <- function(grupo_df) {
 
 reglamentos_tecnicos_ucla <- function(grupo_df) {
 
+  categoria <- producto <- info_1 <- Titulo <- info_2 <- Ano <- Sitio_Web <-
+  info_3 <- Disponibilidad <- Sitio_web <- info_4 <- Institucion_Financiadora<-
+  info_5 <- info_6 <- Autores <- NULL
+
   grupo_df_reglamentos_tecnicos <-
     grupo_df %>%
     filter(categoria == paste("Reglamentos t",e,"cnicos", sep = "")) %>%
@@ -1922,6 +1979,11 @@ reglamentos_tecnicos_ucla <- function(grupo_df) {
 }
 
 otros_productos_tencologicos_ucla <- function(grupo_df) {
+
+  categoria <- producto <- info_1 <- Titulo <- info_2 <- info_3 <- Ano <-
+  Disponibilidad <- Nombre_comercial <- info_4 <- Institucion_Financiadora <-
+  info_5 <- info_6 <- Autores <- NULL
+
 
   grupo_df_otros_productos_tecnologicos<-
     grupo_df %>%
@@ -1962,6 +2024,11 @@ otros_productos_tencologicos_ucla <- function(grupo_df) {
 
 traducciones_ucla <- function(grupo_df) {
 
+  categoria <- producto <- info_8 <- info_1 <- tipo_producto <- info_2 <-
+  ano <- revista <- info_3 <- ISSN <- libro <- info_4 <- ISBN <- info_5 <-
+  idioma_documento_original <- info_6 <- edicion <- serie <- info_7 <-
+  info_9 <- NULL
+
   grupo_df_traducciones <-
     grupo_df %>%
     filter(categoria == "Traducciones") %>%
@@ -2001,6 +2068,10 @@ traducciones_ucla <- function(grupo_df) {
 
 signos_distintivos_ucla <- function(grupo_df){
 
+  categoria <- producto <- info_1 <- tipo_producto <- Titulo <-
+  info_2 <- pais <- ano <- info_3 <- numero_registro <- NULL
+
+
   grupo_df_signos_distintivos <-
     grupo_df %>%
     filter(categoria == "Signos distintivos") %>%
@@ -2025,6 +2096,11 @@ signos_distintivos_ucla <- function(grupo_df){
 }
 
 nuevos_registros_cientificos_ucla <- function(grupo_df) {
+
+  categoria <- producto <- info_1 <- Titulo <- info_2 <- info_3 <- Ano <-
+  Mes <- Ciudad <- info_4 <- info_5 <- Base_de_Datos <- Sitio_web <-
+  Institucion <- info_6 <- info_7 <- Institucion_Certificadora <-
+  Descripcion_registro <- info_8 <- info_9 <- Descripcion <- NULL
 
   grupo_df_nuevos_registros_cientificos<-
     grupo_df %>%
@@ -2086,6 +2162,10 @@ nuevos_registros_cientificos_ucla <- function(grupo_df) {
 
 libros_divulgacion_compilacion_ucla <- function(grupo_df) {
 
+  producto <- info_6 <- info_1 <- tipo_producto1 <- tipo_producto <-
+  titulo <- info_2 <- pais <- info_3 <- ano <- info_4 <- ISBN <- categoria <-
+  info_5 <- editorial <- info_7 <- autores <- NULL
+
   grupo_df_libros_divulgacion_compilacion<-
     grupo_df %>%
     filter(categoria == paste("Libros de divulgaci",o,"n y/o Compilaci",o,"n de divulgaci",o,"n", sep = "")) %>%
@@ -2118,6 +2198,10 @@ libros_divulgacion_compilacion_ucla <- function(grupo_df) {
 
 libros_formacion_ucla <- function(grupo_df) {
 
+  categoria <- producto <- info_6 <- info_1 <- tipo_producto <-
+  titulo <- info_2 <- pais <- info_3 <- ano <- info_4 <- ISBN <- editorial <-
+  info_5 <- info_7 <- autores <- NULL
+
   grupo_df_libros_formacion<-
     grupo_df %>%
     filter(categoria == paste("Libros de formaci",o,"n", sep = "")) %>%
@@ -2148,6 +2232,11 @@ libros_formacion_ucla <- function(grupo_df) {
 }
 
 producciones_digital_audiovisual_ucla <- function(grupo_df){
+
+  categoria <- producto <- info_1 <- tipo_producto <- titulo_producto <-
+  info_3 <- ano <- mes <- verificacion <- info_5 <- publico_objetivo <-
+  cuidad <- genero_literario <- tipo <- info_6 <- nombre_proyecto <-
+  tipo_circulacion <- info_7 <- info_8 <- info_2 <- info_4 <- NULL
 
   grupo_df_producciones_digital_audiovisual <-
     grupo_df %>%
@@ -2242,6 +2331,11 @@ Producciones_de_contenido_digital_ucla <- function(grupo_df){
 
 notas_cientificas_ucla <- function(grupo_df){
 
+  categoria <- producto <- info_1 <- nota_cientifica <- info_3 <- revista <-
+  info_5 <- info_8 <- pagina_inicial <- info_10 <- ano <- sitio_web <- mes <-
+  info_12 <- volumen <- info_2 <- info_4 <- info_6 <- info_7 <- info_9 <-
+  info_11 <- NULL
+
   grupo_df_notas_cientificas <-
     grupo_df %>%
     filter(categoria == paste("Notas cient",i,"ficas", sep = "")) %>%
@@ -2271,6 +2365,10 @@ notas_cientificas_ucla <- function(grupo_df){
 }
 
 manuales_guias_especializadas_ucla <- function(grupo_df) {
+
+  categoria <- producto <- info_1 <- tipo_producto <- titulo <-
+  info_2 <- pais <- info_3 <- ano <- info_4 <- ISBN <- info_5 <-
+  editorial <- info_7 <- autores <- info_6 <- NULL
 
   grupo_df_manuales_guias_especializadas <-
     grupo_df %>%
@@ -2696,6 +2794,11 @@ count_articles_researcher <- function(produccion_actualizada) {
 }
 
 researcher_product <- function(produccion_actualizada){
+
+  autores <- grupo <- titulo <- articulos <- titulo_capitulo <-
+  capitulos <- Autores <- Titulo <- libros <- softwares <-
+  innovaciones <- tutor_coautor <- trabajos_dirigidos <-
+  integrantes <- horas_dedicacion <- NULL
 
   if(dim(produccion_actualizada[[2]][["articulos"]])[1] == 0){
     articulos_author <- tibble(grupo="NA",

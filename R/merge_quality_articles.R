@@ -1,5 +1,9 @@
 merge_quality_articles <- function(produccion_grupos){
 
+  Issn <- ISSN <- SJR_Q <- ano <- VIGENCIA <- revista_h <-
+  internationals_journal_2021 <- categoria.x <- categoria.y <-
+  revista.x <- categoria_revista <- grupo <- NULL
+
   data(scimago_2020, envir = environment())
   data(scimago_data, envir = environment())
   data(international_journals_2016_2020, envir = environment())
