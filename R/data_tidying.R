@@ -13,6 +13,9 @@ library(igraph)
 
 data_tidying <- function(produccion_grupos, grupos) {
 
+  grupo <- id <- titulo <- words <- similarity <- V2 <-
+    NULL
+
   df <- tibble(id = numeric())
 
   grupo_df_articulos <- # create an id

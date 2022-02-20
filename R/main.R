@@ -41,6 +41,7 @@ getting_data <- function(groups, researchers) {
 #   usethis::use_package('xml2')
 #   usethis::use_package('writexl')
 #   usethis::use_package('igraph')
+  grupo <- NULL
 
   if(missing(researchers)){
     researchers = 0
