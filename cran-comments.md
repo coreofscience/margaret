@@ -10,3 +10,5 @@ There was 2 Notes
 * checking R code for possible problems ... NOTE
 
 We added the LICENSE files missing
+
+Global variables and functions were defined

@@ -2099,7 +2099,7 @@ nuevos_registros_cientificos_ucla <- function(grupo_df) {
 
   categoria <- producto <- info_1 <- Titulo <- info_2 <- info_3 <- Ano <-
   Mes <- Ciudad <- info_4 <- info_5 <- Base_de_Datos <- Sitio_web <-
-  Institucion <- info_6 <- info_7 <- Institucion_Certificadora <-
+  Institucion <- info_6 <- info_7 <- Instituccion_certificadora <-
   Descripcion_registro <- info_8 <- info_9 <- Descripcion <- NULL
 
   grupo_df_nuevos_registros_cientificos<-
@@ -2726,6 +2726,7 @@ make_general_grupos <- function(produccion_actualizada){
   #   left_join(group_production, by = "grupo") #<--- Datos elevados
 
   ## Revisar cantidad de articulos (esta treayendo mas del timepo 2016/20)
+  grupo <- ano <- NULL
 
   general_grupos <- produccion_actualizada[[2]][["articulos"]] |>
     select(grupo, ano) |>

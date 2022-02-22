@@ -1,12 +1,14 @@
 #' @title Data getting
 #' @description This function get information from GrupLac.
-#' @import usethis stringr tidyr rlang devtools lubridate SnowballC gt kableExtra openxlsx rvest scholar stringi tidytext tidyverse treemapify widyr writexl
+#' @import usethis dplyr stringr tidyr rlang devtools lubridate SnowballC rvest scholar stringi tidytext tidyverse treemapify widyr writexl
 #' @param groups A dataframe with information about groups and links from GrupLAC
 #' @param researchers A dataframe with ID from google scholar form researchers
 #' @details Extracts data from Minciencias web pages about research groups and researchers.
 #' @export
+#' @importFrom tibble column_to_rownames
+#' @importFrom purrr map safely
+#' @importFrom readr parse_date locale read_csv
 #' @importFrom dplyr select mutate filter
-#' @importFrom kableExtra group_rows
 #' @importFrom stats end var
 #' @importFrom utils data
 #' @importFrom lubridate ym today

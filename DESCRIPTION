@@ -23,27 +23,26 @@ Authors@R:
             role = c("cph", "fnd")))
 Description: The target of 'margaret' is help to extract data from Minciencias to analyze scientific production in Colombia.
 Depends:
-    R (>= 3.5.0),
-    tidyverse
+    R (>= 3.5.0)
 Imports:
+    readr,
     rlang,
     dplyr,
     usethis,
     devtools,
     SnowballC,
-    gt,
-    kableExtra,
     lubridate,
-    openxlsx,
     rvest,
     scholar,
+    purrr,
     stringi,
     stringr,
     tidytext,
     tidyr,
+    tidyverse,
     treemapify,
+    tibble,
     widyr,
-    xml2,
     writexl,
     igraph
 Suggests: 
