@@ -2804,7 +2804,7 @@ researcher_product <- function(produccion_actualizada){
   if(dim(produccion_actualizada[[2]][["articulos"]])[1] == 0){
     articulos_author <- tibble(grupo="NA",
                                autores="NA",
-                               articulos=0)
+                               articulos="NA")
   }else{
 
     articulos_author <-
@@ -2826,12 +2826,18 @@ researcher_product <- function(produccion_actualizada){
       unique() |>
       rename(articulos = n) |>
       separate_rows(c(grupo,articulos), sep = "; ")
+
+    if(dim(articulos_author)[1] == 0){
+      articulos_author <- tibble(grupo = "NA",
+                                    autores = "NA",
+                                    articulos ="NA")
+    }
   }
 
   if(dim(produccion_actualizada[[2]][["capitulos"]])[1] == 0){
     capitulos_author <- tibble(grupo="NA",
                                autores="NA",
-                               capitulos=0)
+                               capitulos="NA")
   }else{
 
     capitulos_author <-
@@ -2853,12 +2859,18 @@ researcher_product <- function(produccion_actualizada){
       unique() |>
       rename(capitulos = n)|>
       separate_rows(c(grupo,capitulos), sep = "; ")
+
+    if(dim(capitulos_author)[1] == 0){
+      capitulos_author <- tibble(grupo = "NA",
+                                    autores = "NA",
+                                    capitulos ="NA")
+    }
   }
 
   if(dim(produccion_actualizada[[2]][["libros"]])[1] == 0){
     libros_author <- tibble(grupo="NA",
                             Autores="NA",
-                            libros=0)
+                            libros="NA")
   }else{
 
     libros_author <-
@@ -2880,12 +2892,18 @@ researcher_product <- function(produccion_actualizada){
       unique() |>
       rename(libros = n)|>
       separate_rows(c(grupo,libros), sep = "; ")
+
+    if(dim(libros_author)[1] == 0){
+      libros_author <- tibble(grupo = "NA",
+                                 autores = "NA",
+                                 libros ="NA")
+    }
   }
 
   if(dim(produccion_actualizada[[2]][["softwares"]])[1] == 0){
     software_author <- tibble(grupo="NA",
                               autores="NA",
-                              softwares=0)
+                              softwares="NA")
   }else{
 
     software_author <-
@@ -2907,6 +2925,12 @@ researcher_product <- function(produccion_actualizada){
       unique() |>
       rename(softwares = n) |>
       separate_rows(c(grupo, softwares), sep = "; ")
+
+    if(dim(software_author)[1] == 0){
+      software_author <- tibble(grupo = "NA",
+                              autores = "NA",
+                              softwares ="NA")
+    }
   }
 
   if(dim(produccion_actualizada[[2]][["innovaciones_gestion"]])[1] == 0){
@@ -2934,12 +2958,18 @@ researcher_product <- function(produccion_actualizada){
       unique() |>
       rename(innovaciones = n) |>
       separate_rows(c(grupo, innovaciones), sep = "; ")
+
+    if(dim(innovaciones_author)[1] == 0){
+      innovaciones_author <- tibble(grupo = "NA",
+                                    autores = "NA",
+                                    innovaciones ="NA")
+    }
   }
 
   if(dim(produccion_actualizada[[2]][["trabajos_dirigidos"]])[1] == 0){
     trabajos_dirigidos_author <- tibble(grupo="NA",
                                         tutor_coautor="NA",
-                                        trabajos_dirigidos=0)
+                                        trabajos_dirigidos="NA")
   }else{
 
     trabajos_dirigidos_author <-
@@ -2961,6 +2991,12 @@ researcher_product <- function(produccion_actualizada){
       unique() |>
       rename(trabajos_dirigidos = n) |>
       separate_rows(c(grupo, trabajos_dirigidos), sep = "; ")
+
+    if(dim(trabajos_dirigidos_author)[1] == 0){
+      trabajos_dirigidos_author <- tibble(grupo = "NA",
+                                    autores = "NA",
+                                    trabajos_dirigidos ="NA")
+    }
   }
 
   researcher_general <-
