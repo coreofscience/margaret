@@ -5,6 +5,13 @@ This package extracts data from Minciencias web pages about research groups and 
 And export the data in a xlsx file.
 
 # Installation
+
+## From CRAN
+
+```r
+install.packages("margaret")
+```
+
 ## From GitHub
 
 ```r
