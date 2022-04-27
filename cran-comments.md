@@ -18,3 +18,10 @@ Global variables and functions were defined
 0 errors | 0 warnings | 1 note
 
 We improve the code for different researcher groups and avoid bugs
+
+* This is a new release.
+
+Duration: 1m 51.1s
+0 errors v | 0 warnings v | 0 notes v
+
+We solve the problem with Lazydata, and add information for paper categories
