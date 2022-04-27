@@ -11,11 +11,16 @@
 "scimago_data"
 
 #' Publindex homologación de revistas 2016 to 2020
-#' @format A dataframe with information about journal ranking from scimago
+#' @format A dataframe with information about journal ranking from Publindex
 #' @source \url{https://scienti.minciencias.gov.co/publindex/#/revistasHomologadas/buscador}
 "international_journals_2016_2020"
 
 #' Publindex homologación de revistas 2021
-#' @format A dataframe with information about journal ranking from scimago
+#' @format A dataframe with information about journal ranking from Publindex
 #' @source \url{https://scienti.minciencias.gov.co/publindex/#/revistasHomologadas/buscador}
 "internationals_journal_2021"
+
+#' Publindex homologación de revistas 2022
+#' @format A dataframe with information about journal ranking from Publindex
+#' @source \url{https://scienti.minciencias.gov.co/publindex/#/revistasHomologadas/buscador}
+"international_journals_2022"
