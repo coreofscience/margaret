@@ -2607,7 +2607,7 @@ get_posgrade_clasficitation_cvlac <- function(cvlac_url) {
   X1 <- X5 <- X7 <- X9 <- value <- rowname <- posgrade <-
     Month <- ranking <- X2 <- clasification <- NULL
 
-  cvlac_df = read_html(cvlac_url) |>
+  cvlac_df = read_html(httr::GET(cvlac_url)) |>
     html_table()
 
   cvlac_posgrade = cvlac_df[[1]] |>
