@@ -39,7 +39,6 @@ data_tidying <- function(produccion_grupos, grupos) {
                     input = titulo,
                     token = "words") %>%
       count(id, words) %>%
-      ungroup() %>%
       pairwise_similarity(item = id,
                           feature = words,
                           value = n)
