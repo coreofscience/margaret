@@ -2607,7 +2607,7 @@ get_posgrade_clasficitation_cvlac <- function(cvlac_url) {
   X1 <- X5 <- X7 <- X9 <- value <- rowname <- posgrade <-
     Month <- ranking <- X2 <- clasification <- NULL
 
-  cvlac_df = read_html(cvlac_url) |>
+  cvlac_df = read_html(httr::GET(cvlac_url)) |>
     html_table()
 
   cvlac_posgrade = cvlac_df[[1]] |>
@@ -2730,10 +2730,13 @@ make_general_grupos <- function(produccion_actualizada){
 
   general_grupos <- produccion_actualizada[[2]][["articulos"]] |>
     select(grupo, ano) |>
-    filter(ano>=2016, ano<=2020) |>
     count(grupo, sort = T, name = "sum_papers") |>
     right_join(produccion_actualizada[[1]], by = "grupo") |>
     select(1,3:13,2)
+
+  #Filter was removed, for show the total papers in each group
+  #filter(ano>=2016, ano<=2020) |>
+
 
   return(general_grupos)
 }

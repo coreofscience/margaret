@@ -7,7 +7,7 @@ data_getting <- function(grupos) {
 
   data_grupos_all <-
     apply(grupos, 1, function(x){
-      URL <- read_html(x['url'])})
+      URL <- read_html(httr::GET(x['url']))})
 
   grupo_main = data_getting_main(grupos, data_grupos_all)
   grupo_researcher = data_getting_researcher(grupos, data_grupos_all)
