@@ -2730,10 +2730,13 @@ make_general_grupos <- function(produccion_actualizada){
 
   general_grupos <- produccion_actualizada[[2]][["articulos"]] |>
     select(grupo, ano) |>
-    filter(ano>=2016, ano<=2020) |>
     count(grupo, sort = T, name = "sum_papers") |>
     right_join(produccion_actualizada[[1]], by = "grupo") |>
     select(1,3:13,2)
+
+  #Filter was removed, for show the total papers in each group
+  #filter(ano>=2016, ano<=2020) |>
+
 
   return(general_grupos)
 }
