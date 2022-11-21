@@ -24,6 +24,17 @@ library(margaret)
 ```
 
 # Examples
+
+### The dataframe with the link of the research groups to search must have the following structure.
+
+#### The dataframe can have more than one group.
+
+#### *example DataFrame*
+| grupo | url |
+|---|---|
+|'SISCO'|'https://scienti.minciencias.gov.co/gruplac/jsp/visualiza/visualizagr.jsp?nro=00000000008639'|
+
+**Note: Column titles must have the same name as the example, even in lowercase**
 ```r
 library(margaret)
 
